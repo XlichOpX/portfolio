@@ -1,0 +1,124 @@
+@import url("./reset.css");
+@import url("./utils.css");
+
+:root {
+  --primary-color: #41337a;
+  --primary-text-color: #070600;
+  --light-bg: #f5f5f5;
+  --light-border: rgba(0, 0, 0, 0.1);
+  --basic-shadow: 0 0 6px rgba(7, 6, 0, 0.15);
+  background-color: var(--light-bg);
+  color: var(--primary-text-color);
+  font-family: Roboto, sans-serif;
+}
+
+.section {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section_primary {
+  background-color: var(--primary-color);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pill {
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+}
+
+.hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 2rem;
+  box-shadow: var(--basic-shadow);
+}
+
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: 2rem;
+    display: block;
+  }
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: white;
+  box-shadow: var(--basic-shadow);
+}
+
+.badge__img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--basic-shadow);
+}
+
+.about-me__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+}
+
+.about-me__text {
+  width: 100%;
+  text-align: center;
+}
+
+.about-me__img {
+  border-radius: 9999px;
+  width: 200px;
+}
+
+@media (min-width: 640px) {
+  .about-me__text {
+    width: 83%;
+    text-align: left;
+  }
+
+  .about-me__img {
+    width: 15%;
+  }
+
+  .about-me__content {
+    gap: 2%;
+  }
+}
