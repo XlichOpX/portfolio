@@ -16,95 +16,83 @@
 
   <body>
     <section class="section section_primary">
-      <div class="container hero">
-        <h1 class="hero__title pill">
+      <div class="container hero px-1 my-2">
+        <h1 class="hero__title rounded-full">
           <span>Yhan Montaño</span>
           <span class="hidden md:inline">-</span>
           <span class="md:hidden"><hr /></span>
           <span>Desarrollador Web</span>
         </h1>
         <ul class="badges">
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/html5.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="HTML5 Logo"
             />
             HTML
           </li>
-          <li class="badge pill">
-            <img
-              src="/src/assets/css3.svg"
-              class="badge__img"
-              alt="CSS3 Logo"
-            />
+          <li class="badges__item rounded-full">
+            <img src="/src/assets/css3.svg" class="tech-icon" alt="CSS3 Logo" />
             CSS
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/js.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="JavaScript Logo"
             />
             JavaScript
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/typescript.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="TypeScript Logo"
             />
             TypeScript
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/react.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="React Logo"
             />
             React
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/nextjs.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="Next.js Logo"
             />
             Next.js
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
               src="/src/assets/tailwindcss.svg"
-              class="badge__img"
+              class="tech-icon"
               alt="TailwindCSS Logo"
             />
             TailwindCSS
           </li>
-          <li class="badge pill">
+          <li class="badges__item rounded-full">
             <img
-              src="/src/assets/mysql.svg"
-              class="badge__img"
-              alt="MySQL Logo"
+              src="/src/assets/sql.svg"
+              class="tech-icon"
+              alt="Logo genérico de Base de Datos SQL"
             />
-            MySQL
-          </li>
-          <li class="badge pill">
-            <img
-              src="/src/assets/postgresql.svg"
-              class="badge__img"
-              alt="PostgreSQL Logo"
-            />
-            PostgreSQL
+            SQL
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="section container">
+    <section class="section container px-1 my-2">
       <div class="about-me card">
         <div class="about-me__content">
           <div class="about-me__text">
-            <h2 class="section-title">Sobre mí 📋</h2>
+            <h2 class="section-title mt-1">Sobre mí 📋</h2>
             <p>
               ¡Hola mundo! Soy Técnico Superior Universitario en Infórmatica
               enfocado en el desarrollo web. Siempre me ha gustado el mundo de
@@ -116,9 +104,223 @@
           <img class="about-me__img" src="/src/assets/me.jpg" />
         </div>
       </div>
+    </section>
 
+    <section class="section container px-1 my-2">
       <div class="my-projects card">
         <h2 class="section-title">Mis projectos 🔨</h2>
+
+        <div class="my-projects__content">
+          <article class="project-item">
+            <h3 class="project-item__title">Conecta 4</h3>
+            <a href="https://conecta-4-five.vercel.app/" target="_blank">
+              <img
+                src="/src/assets/projects/conecta4.png"
+                class="project-item__img"
+              />
+            </a>
+            <p class="project-item__desc">
+              Un clon del clásico juego Conecta 4 para dos jugadores
+            </p>
+
+            <ul class="project-techs">
+              <li class="project-techs__item">
+                <a
+                  href="https://www.typescriptlang.org/"
+                  title="TypeScript"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/typescript.svg"
+                    class="tech-icon"
+                    alt="TypeScript"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a href="https://reactjs.org/" title="React" target="_blank">
+                  <img
+                    src="/src/assets/react.svg"
+                    class="tech-icon"
+                    alt="React"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://tailwindcss.com/"
+                  title="TailwindCSS"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/tailwindcss.svg"
+                    class="tech-icon"
+                    alt="TailwindCSS"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://github.com/XlichOpX/conecta-4"
+                  title="Repositorio"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/github.svg"
+                    class="tech-icon"
+                    alt="GitHub Mark"
+                  />
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <h3 class="project-item__title">KitchenAccountant</h3>
+            <a href="https://kitchenaccountant.vercel.app/" target="_blank">
+              <img
+                src="/src/assets/projects/kitchenaccountant.png"
+                class="project-item__img"
+              />
+            </a>
+            <p class="project-item__desc">
+              Una sencilla calculadora de costos para recetas de cocina
+            </p>
+            <ul class="project-techs">
+              <li class="project-techs__item">
+                <a
+                  href="https://www.typescriptlang.org/"
+                  title="TypeScript"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/typescript.svg"
+                    class="tech-icon"
+                    alt="TypeScript"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a href="https://nextjs.org/" title="Next.js" target="_blank">
+                  <img
+                    src="/src/assets/nextjs.svg"
+                    class="tech-icon"
+                    alt="Next.js"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://tailwindcss.com/"
+                  title="TailwindCSS"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/tailwindcss.svg"
+                    class="tech-icon"
+                    alt="TailwindCSS"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://www.prisma.io/"
+                  title="Prisma ORM"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/prisma.svg"
+                    class="tech-icon"
+                    alt="Prisma ORM Logo"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://github.com/XlichOpX/kitchenaccountant"
+                  title="Repositorio"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/github.svg"
+                    class="tech-icon"
+                    alt="GitHub Mark"
+                  />
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-item">
+            <h3 class="project-item__title">SCIU</h3>
+            <img
+              src="/src/assets/projects/sciu.png"
+              class="project-item__img"
+            />
+            <p class="project-item__desc">
+              Un sistema de cobranzas realizado para una universidad
+            </p>
+            <ul class="project-techs">
+              <li class="project-techs__item">
+                <a href="https://www.typescriptlang.org/" title="TypeScript">
+                  <img
+                    src="/src/assets/typescript.svg"
+                    class="tech-icon"
+                    alt="TypeScript"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a href="https://nextjs.org/" title="Next.js" target="_blank">
+                  <img
+                    src="/src/assets/nextjs.svg"
+                    class="tech-icon"
+                    alt="Next.js"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://chakra-ui.com/"
+                  title="Chakra UI"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/chakra.svg"
+                    class="tech-icon"
+                    alt="Chakra UI"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://www.prisma.io/"
+                  title="Prisma ORM"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/prisma.svg"
+                    class="tech-icon"
+                    alt="Prisma ORM Logo"
+                  />
+                </a>
+              </li>
+              <li class="project-techs__item">
+                <a
+                  href="https://github.com/XlichOpX/sciu-teg"
+                  title="Repositorio"
+                  target="_blank"
+                >
+                  <img
+                    src="/src/assets/github.svg"
+                    class="tech-icon"
+                    alt="GitHub Mark"
+                  />
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
   </body>

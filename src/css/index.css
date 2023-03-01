@@ -5,18 +5,25 @@
   --primary-color: #41337a;
   --primary-text-color: #070600;
   --light-bg: #f5f5f5;
-  --light-border: rgba(0, 0, 0, 0.1);
-  --basic-shadow: 0 0 6px rgba(7, 6, 0, 0.15);
+  --light-border: rgba(0, 0, 0, 0.15);
+  --shadow-color: rgba(7, 6, 0, 0.15);
+  --basic-shadow: 0 0 6px var(--shadow-color);
   background-color: var(--light-bg);
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
 }
 
 .section {
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .section {
+    text-align: left;
+  }
 }
 
 .section_primary {
@@ -26,16 +33,15 @@
 .section-title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--light-border);
+  padding-bottom: 0.6rem;
 }
 
-.pill {
+.rounded-full {
   border-radius: 9999px;
-  padding: 0.5rem 1rem;
 }
 
 .hero {
-  min-height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,15 +75,16 @@
   gap: 1rem;
 }
 
-.badge {
+.badges__item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   background-color: white;
   box-shadow: var(--basic-shadow);
+  padding: 0.5rem 1rem;
 }
 
-.badge__img {
+.tech-icon {
   width: 2rem;
   height: 2rem;
   object-fit: contain;
@@ -100,7 +107,6 @@
 
 .about-me__text {
   width: 100%;
-  text-align: center;
 }
 
 .about-me__img {
@@ -111,7 +117,6 @@
 @media (min-width: 640px) {
   .about-me__text {
     width: 83%;
-    text-align: left;
   }
 
   .about-me__img {
@@ -121,4 +126,61 @@
   .about-me__content {
     gap: 2%;
   }
+}
+
+.my-projects__content {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .my-projects__content > * + * {
+    border-top: 1px solid var(--light-border);
+  }
+}
+
+@media (min-width: 640px) {
+  .my-projects__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.project-item {
+  padding: 1.5rem 0;
+}
+
+.project-item__img,
+.project-item__title,
+.project-item__desc {
+  margin-bottom: 1rem;
+}
+
+.project-item__img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  box-shadow: 0 0 6px var(--shadow-color);
+}
+
+.project-techs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-techs__item {
+  display: flex;
+  align-items: center;
+}
+
+.project-item__title {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.2rem 0.5rem;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
 }
