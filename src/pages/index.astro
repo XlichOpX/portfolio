@@ -78,6 +78,14 @@ const technologies = new Map([
       link: "https://chakra-ui.com/",
     },
   ],
+  [
+    "astro",
+    {
+      name: "Astro",
+      iconUrl: "/assets/tech-icons/astro.svg",
+      link: "https://astro.build/",
+    },
+  ],
 ]);
 
 const contactMethods = [
@@ -94,6 +102,14 @@ const contactMethods = [
 ];
 
 const projects = [
+  {
+    name: "Space Tourism",
+    imageUrl: "/assets/projects/space-tourism.jpeg",
+    repo: "https://github.com/XlichOpX/space-tourism-website",
+    liveUrl: "https://space-tourism-website-xlichopx.vercel.app/",
+    description: "Sitio web para una agencia de turismo espacial",
+    technologies: ["html", "css", "js", "astro"],
+  },
   {
     name: "Conecta 4",
     imageUrl: "/assets/projects/conecta4.png",
@@ -151,7 +167,11 @@ const projects = [
               for (const tech of technologies.values()) {
                 listItems.push(
                   <li class="badges__item rounded-full">
-                    <a class="badges__item-link" href={tech.link}>
+                    <a
+                      class="badges__item-link"
+                      target="_blank"
+                      href={tech.link}
+                    >
                       <img
                         src={tech.iconUrl}
                         class="tech-icon"
