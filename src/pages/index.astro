@@ -1,0 +1,244 @@
+---
+import "../css/index.css";
+
+const technologies = new Map([
+  [
+    "html",
+    {
+      name: "HTML",
+      iconUrl: "/assets/tech-icons/html5.svg",
+    },
+  ],
+  [
+    "css",
+    {
+      name: "CSS",
+      iconUrl: "/assets/tech-icons/css3.svg",
+    },
+  ],
+  [
+    "js",
+    {
+      name: "JavaScript",
+      iconUrl: "/assets/tech-icons/js.svg",
+    },
+  ],
+  [
+    "ts",
+    {
+      name: "TypeScript",
+      iconUrl: "/assets/tech-icons/typescript.svg",
+      link: "https://www.typescriptlang.org/",
+    },
+  ],
+  [
+    "react",
+    {
+      name: "React",
+      iconUrl: "/assets/tech-icons/react.svg",
+      link: "https://react.dev/",
+    },
+  ],
+  [
+    "nextjs",
+    {
+      name: "Next.js",
+      iconUrl: "/assets/tech-icons/nextjs.svg",
+      link: "https://nextjs.org/",
+    },
+  ],
+  [
+    "tailwind",
+    {
+      name: "TailwindCSS",
+      iconUrl: "/assets/tech-icons/tailwindcss.svg",
+      link: "https://tailwindcss.com/",
+    },
+  ],
+  [
+    "sql",
+    {
+      name: "SQL",
+      iconUrl: "/assets/tech-icons/sql.svg",
+    },
+  ],
+  [
+    "prisma",
+    {
+      name: "Prisma",
+      iconUrl: "/assets/tech-icons/prisma.svg",
+      link: "https://www.prisma.io/",
+    },
+  ],
+  [
+    "chakraui",
+    {
+      name: "Chakra UI",
+      iconUrl: "/assets/tech-icons/chakra.svg",
+      link: "https://chakra-ui.com/",
+    },
+  ],
+]);
+
+const contactMethods = [
+  {
+    href: "mailto:yhan.montano2001@gmail.com",
+    name: "Correo electrónico",
+    icon: "/assets/envelope.svg",
+  },
+  {
+    href: "https://github.com/XlichOpX",
+    name: "GitHub",
+    icon: "/assets/tech-icons/github.svg",
+  },
+];
+
+const projects = [
+  {
+    name: "Conecta 4",
+    imageUrl: "/assets/projects/conecta4.png",
+    repo: "https://github.com/XlichOpX/conecta-4",
+    liveUrl: "https://conecta-4-five.vercel.app/",
+    description: "Un clon del clásico juego Conecta 4 para dos jugadores",
+    technologies: ["ts", "react", "tailwind"],
+  },
+  {
+    name: "KitchenAccountant",
+    imageUrl: "/assets/projects/kitchenaccountant.png",
+    repo: "https://github.com/XlichOpX/kitchenaccountant",
+    liveUrl: "https://kitchenaccountant.vercel.app/",
+    description: "Una sencilla calculadora de costos para recetas de cocina",
+    technologies: ["ts", "nextjs", "tailwind", "prisma"],
+  },
+  {
+    name: "SCIU",
+    imageUrl: "/assets/projects/sciu.png",
+    repo: "https://github.com/XlichOpX/sciu-teg",
+    description: "Un sistema de cobranzas realizado para una universidad",
+    technologies: ["ts", "nextjs", "chakraui", "prisma"],
+  },
+];
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yhan Montaño - Desarrollador Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="section section_primary">
+      <div class="container hero px-1 my-2">
+        <h1 class="hero__title rounded-full">
+          <span>Yhan Montaño</span>
+          <span class="hidden md:inline">-</span>
+          <span class="md:hidden"><hr /></span>
+          <span>Desarrollador Web</span>
+        </h1>
+        <ul class="badges">
+          {
+            (() => {
+              const listItems = [];
+              for (const tech of technologies.values()) {
+                listItems.push(
+                  <li class="badges__item rounded-full">
+                    <a class="badges__item-link" href={tech.link}>
+                      <img
+                        src={tech.iconUrl}
+                        class="tech-icon"
+                        alt={tech.name + " Logo"}
+                      />
+                      <span>{tech.name}</span>
+                    </a>
+                  </li>
+                );
+              }
+              return listItems;
+            })()
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container px-1 my-2">
+      <div class="about-me card">
+        <div class="about-me__content">
+          <div class="about-me__text">
+            <h2 class="section-title mb-1">Sobre mí 📋</h2>
+            <p>
+              ¡Hola mundo! Soy Técnico Superior Universitario en Infórmatica
+              enfocado en el desarrollo web. Siempre me ha gustado el mundo de
+              la programación y desde muy temprano supe que quería dedicarme a
+              ello. Disfruto mucho el aprender cosas nuevas y el proceso de
+              solucionar problemas mediante el desarrollo de software.
+            </p>
+
+            <ul class="contact-methods mt-1">
+              {
+                contactMethods.map((method) => (
+                  <li>
+                    <a href={method.href} class="contact-methods__link">
+                      <img src={method.icon} class="tech-icon" />
+                      <span class="sr-only">{method.name}</span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <img class="about-me__img" src="/assets/me.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section container px-1 my-2">
+      <div class="my-projects card">
+        <h2 class="section-title">Mis projectos 🔨</h2>
+
+        <div class="my-projects__content">
+          {
+            projects.map((project) => (
+              <article class="project-item">
+                <h3 class="project-item__title">{project.name}</h3>
+                <a href={project.liveUrl || project.repo} target="_blank">
+                  <img src={project.imageUrl} class="project-item__img" />
+                </a>
+                <p class="project-item__desc">{project.description}</p>
+
+                <ul class="project-techs">
+                  {project.technologies.map((tech) => (
+                    <li class="project-techs__item">
+                      <img
+                        src={technologies.get(tech).iconUrl}
+                        class="tech-icon"
+                        alt={technologies.get(tech).name}
+                      />
+                    </li>
+                  ))}
+                  <li class="project-techs__item">
+                    <a href={project.repo} title="Repositorio" target="_blank">
+                      <img
+                        src="/assets/tech-icons/github.svg"
+                        class="tech-icon"
+                        alt="GitHub Mark"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

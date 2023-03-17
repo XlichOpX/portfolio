@@ -76,12 +76,17 @@
 }
 
 .badges__item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   background-color: white;
   box-shadow: var(--basic-shadow);
   padding: 0.5rem 1rem;
+}
+
+.badges__item-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--primary-text-color);
 }
 
 .tech-icon {
