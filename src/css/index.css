@@ -102,14 +102,6 @@
   box-shadow: var(--basic-shadow);
 }
 
-.about-me__content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-  gap: 1rem;
-}
-
 .about-me__text {
   width: 100%;
 }
@@ -117,20 +109,6 @@
 .about-me__img {
   border-radius: 9999px;
   width: 200px;
-}
-
-@media (min-width: 640px) {
-  .about-me__text {
-    width: 83%;
-  }
-
-  .about-me__img {
-    width: 15%;
-  }
-
-  .about-me__content {
-    gap: 2%;
-  }
 }
 
 .contact-methods,
